@@ -1,7 +1,4 @@
-names = []
-with open ("names.txt") as skib:
-    for line in skib:
-        names.append(line.rstrip())
-
-for name in sorted(names, reverse=True):
-    print("Hello" , name)
+with open("names.csv") as file:
+    for line in file:
+        row = line.rstrip().split(",")
+        print(f"{row[0]} is in {row[1]}")
