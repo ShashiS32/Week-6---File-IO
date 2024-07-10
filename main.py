@@ -1,8 +1,7 @@
-name = []
-
-with open("files.txt") as skib:
+names = []
+with open ("names.txt") as skib:
     for line in skib:
-        name.append(line.rstrip)
+        names.append(line.rstrip())
 
-for names in sorted(name):
-    print(f"Hello {names}")
+for name in sorted(names):
+    print("Hello" , name)
