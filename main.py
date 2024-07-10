@@ -1,7 +1,7 @@
-name = input("Whats ur name? ")
+name = input("Name: ")
 
-file = open("names.txt" , "w" )
 
-file.write(name)
+with open("names.txt" , "a") as skib:
 
-file.close
+    skib.write(f"{name} \n")
+
