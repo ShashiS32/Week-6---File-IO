@@ -1,5 +1,3 @@
 with open("names.txt" , "r") as skib:
-    lines = skib.readlines()
-
-for line in lines:
-    print(f"hello" , line.rstrip()) 
+    for line in skib:
+        print("Hello" , line.rstrip())
