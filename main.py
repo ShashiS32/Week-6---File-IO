@@ -1,7 +1,14 @@
-import csv
-name = input("Name?: ")
-home = input("Wheres ur home?: ")
+import sys
 
-with open("names.csv", "a") as file:
-    writer = csv.DictWriter(file, fieldnames=["name" , "home"])
-    writer.writerow({"name":name, "home":home})
+from PIL import Image
+
+images = []
+
+for arg in sys.argv[1:]:
+    image = Image.open(arg)
+    images.append(image)
+
+
+images[0].save(
+    "costumes.gif", save_all = True, append_images = [images[1]] , duration = 1, loop = 0
+)
